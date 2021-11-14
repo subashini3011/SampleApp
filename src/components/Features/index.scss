@@ -1,0 +1,28 @@
+@import '../../scss';
+
+.features{
+    padding:10px 0;
+    &__heading{
+    @include text('Roboto', 2.4rem, normal, normal, normal, normal, normal);
+    padding:0 0 10px;
+    border-bottom:1px solid black;
+    }
+    &__content{
+        display:flex;
+        &__title{
+            @include text('Roboto', 1.8rem, bold, normal, normal, normal, normal);
+            width:180px;
+            padding:5px 0;
+        }
+        &__text{
+            @include text('Roboto', 2rem, normal, normal, normal, normal, normal);
+            width:300px;
+            padding:5px 0;
+            &__link{
+                color:black;
+                text-decoration:none;
+            }
+        }
+
+    }
+}

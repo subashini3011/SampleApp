@@ -1,0 +1,74 @@
+@import '../../scss';
+
+
+.details_container{
+          @include containerHeight;
+  width: 100%;
+            position: relative;
+.details{
+    display:flex;
+    &__carousel{
+        width:60%;
+        margin:10px 20px;
+    }
+    &__features{
+        width:32%;
+        padding:0 2rem;
+        &__images{
+            text-align:right;
+            border-bottom:1px solid black;
+            &__img{
+                width:20px;
+                margin:10px;
+            }
+        }
+        &__price{
+            padding:10px 0;
+            display:flex;
+            align-items:flex-end;
+  @include text('Roboto', 1.8rem, bold, normal, normal, normal, normal);
+
+        }
+        &__room{
+                        padding:0 10px;
+
+              @include text('Roboto', 1.5rem, normal, normal, normal, normal, normal);
+
+        }
+                &__rooms{
+                        padding:10px 0;
+
+              @include text('Roboto', 1.5rem, normal, normal, normal, normal, normal);
+
+        }
+        &__contact{
+                                    padding:10px 0;
+
+              @include text('Roboto', 1.5rem, normal, normal, normal, normal, normal);
+              text-decoration: underline;
+              color:$color-mango-90;
+
+        }
+
+    }
+}
+
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .details_container{
+          .details {
+      flex-direction: column;
+      &__carousel{
+          width:100%
+      }
+      &__features{
+          width:100%;
+      }
+  }
+
+    }
+}

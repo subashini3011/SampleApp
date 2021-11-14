@@ -1,0 +1,15 @@
+@import '../../scss';
+
+.agent{
+    display:flex;
+    margin-bottom:50px;
+    &__image{
+        width:80px;
+    }
+    &__text{
+        padding:5px 10px 0;
+          @include text('Roboto', 1.5rem, normal, normal, normal, normal, normal);
+          color:black;
+
+    }
+}

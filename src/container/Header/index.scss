@@ -1,0 +1,31 @@
+@import '../../scss';
+
+
+.header{
+    background-color:$color-greyish-primary;
+    height:40px;
+    @include text('Roboto', 1.7rem, normal, normal, normal, normal, normal);
+      position: fixed;
+  top: 0;
+  width: 100%;
+z-index:999;
+@include flexCenter;
+
+&__title{
+    text-align: center;
+    padding:20px 0;
+
+
+}
+&__logout{
+        padding:20px 0;
+              position: fixed;
+  left: 94%;
+  width: 100%;
+      @include text('Roboto', 1.7rem, normal, normal, normal, normal, normal);
+      cursor: pointer;
+
+
+
+}
+}

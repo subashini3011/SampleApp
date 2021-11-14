@@ -1,0 +1,12 @@
+@import '../../scss';
+
+
+.footer{
+    background-color:$color-greyish-primary;
+    height:40px;
+    @include text('Roboto', 1.7rem, normal, normal, normal, normal, normal);
+    @include flexCenter;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,97 @@
+@import '../../scss';
+
+.button {
+  border: none;
+  user-select: none;
+  text-align: center;
+  cursor: pointer;
+  color: $color-white-primary;
+  padding: 0 15px;
+  min-width: 100px;
+  min-height: 24px;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  position: relative;
+  height: 100%;
+  @include text('Roboto', 1.2rem, normal, normal, normal, normal, normal);
+  background-color:black;
+  &__leftContent {
+    margin: 0 20px;
+  }
+  &__rightContent {
+    margin: 0 20px;
+  }
+
+  &.block {
+    width: 100%;
+        height: 42px;
+
+
+  }
+
+  &.big {
+    height: 42px;
+  }
+
+  &.small {
+    height: 28px;
+  }
+
+
+  &.white {
+    color: $color-grey-secondary;
+    box-shadow: 0 4px 10px 0 $color-black-rgba-primary;
+    border: solid 1px $color-black-secondary;
+    background-image: none;
+    background-color: $color-white-primary;
+  }
+
+  &.lightgrey {
+    background-image: none;
+    background-color: $color-lightgrey-primary;
+    color: $color-grey-secondary;
+  }
+
+  &.red {
+    background-image: none;
+    background-color: $color-red-primary;
+  }
+
+  &.blue {
+    background-image: linear-gradient(
+      166deg,
+      $color-darkskyblue-secondary,
+      $color-darkskyblue-ternary
+    );
+  }
+
+  &.duckeggblue {
+    background-image: none;
+    background-color: $color-duck-egg-blue-primary;
+    color: $color-grey-secondary;
+    padding: 0 2rem;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    &.big {
+      height: 38px;
+      font-size: 1.4rem;
+    }
+
+    &.small {
+      height: 24px;
+      font-size: 1.1rem;
+    }
+    &.lightgrey {
+      background-image: none;
+      background-color: $color-lightgrey-secondary;
+      color: $color-dark-black-primary;
+    }
+  }
+}

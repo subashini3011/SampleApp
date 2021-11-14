@@ -1,0 +1,23 @@
+@import '../../scss';
+
+.login_container {
+  @include containerHeight;
+  @include flexCenter;
+  .login {
+    &_input {
+      width: 340px;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .login_container {
+    .login {
+      padding: 2rem;
+      &_input {
+        width: 100%;
+      }
+    }
+  }
+}

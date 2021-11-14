@@ -1,0 +1,19 @@
+@import '../../scss';
+
+.property{
+    width:350px;
+    margin:0 15px 30px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        padding:10px 0 0;
+  @include text('Roboto', 1.4rem, normal, normal, normal, normal, normal);
+  text-align:center;
+
+    }
+    &__description{
+  @include text('Roboto', 1.4rem, normal, normal, normal, normal, normal);
+    }
+}

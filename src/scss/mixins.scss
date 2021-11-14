@@ -1,0 +1,20 @@
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin containerHeight {
+  height: calc(100vh);
+  padding-top: 76px;
+}
+
+@mixin text($family, $size, $weight, $style, $stretch, $height, $spacing) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  font-stretch: $stretch;
+  line-height: $height;
+  letter-spacing: $spacing;
+}

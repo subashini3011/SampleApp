@@ -1,0 +1,84 @@
+@import '../../scss';
+
+.input {
+  &_container {
+    margin: 20px 0px;
+  }
+  border-bottom: 2px solid $color-grey-secondary-rgba;
+  padding: 0 8px;
+  position: relative;
+  @include text('Roboto', 1.4rem, normal, normal, normal, normal, normal);
+  & input {
+    border: none;
+    font-size: 1.6rem;
+    margin: 18px 0 10px;
+    outline: 0;
+    color: $color-grey-secondary;
+    width: 100%;
+    &:invalid {
+      border: 0;
+      box-shadow: none;
+    }
+    &:disabled {
+      background: transparent;
+      cursor: not-allowed;
+    }
+  }
+
+  &.textSelect {
+    & input {
+      &:disabled {
+        background: transparent;
+        cursor: text;
+      }
+    }
+  }
+
+  &.hasvalue label {
+    transform: translate(0, 1px) scale(0.75);
+    opacity: 1;
+    color: $color-grey-secondary;
+  }
+
+  &.active {
+    border-bottom: 2px solid $color-yellow-primary;
+    & label {
+      transform: translate(0, 1px) scale(0.75);
+      opacity: 1;
+      color: $color-yellow-one;
+      font-size: 1.6rem;
+    }
+  }
+
+  &.error {
+    border-bottom: 2px solid $color-red-primary;
+    & label {
+      transform: translate(0, 1px) scale(0.75);
+      opacity: 1;
+      color: $color-red-primary;
+      font-size: 1.6rem;
+    }
+  }
+
+  label {
+    font-size: 1.6rem;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0, 16px) scale(1);
+    transition: all 0.1s ease-in-out;
+    color: $color-grey-secondary;
+  }
+
+  &_message {
+    background-color: $color-light-red-rgba-primary;
+    @include text('Open Sans', 0.7rem, 600, normal, normal, normal, normal);
+    color: $color-light-red-primary;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    &_text {
+      text-align: center;
+      padding: 0 0 0 1rem;
+    }
+  }
+}

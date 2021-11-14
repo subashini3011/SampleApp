@@ -1,0 +1,44 @@
+@import '../../scss';
+
+.loader {
+  border: 3px solid $color-white-primary;
+  border-radius: 50%;
+  border-right: 3px solid $color-yellow-primary;
+  border-left: 3px solid $color-yellow-primary;
+  border-bottom: 3px solid $color-yellow-primary;
+  width: 25px;
+  height: 25px;
+  -webkit-animation: spin 0.7s linear infinite; /* Safari */
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+  &.full {
+    width: 30px;
+    height: 30px;
+  }
+  &_wrapper {
+    @include flexCenter;
+    padding: 1rem;
+    &.full {
+      height: 100%;
+    }
+  }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
